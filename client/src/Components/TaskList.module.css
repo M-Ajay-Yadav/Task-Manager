@@ -1,0 +1,76 @@
+.list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.listItem {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.listItem span {
+    flex-grow: 1;
+    margin: 0 10px;
+}
+
+.listItem input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+.listItem button {
+    margin-left: 5px;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.editInput {
+    flex-grow: 1;
+    margin: 0 5px;
+    padding: 5px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.updateButton {
+    background-color: #28a745;
+    color: white;
+}
+
+.updateButton:hover {
+    background-color: #218838;
+}
+
+.cancelButton {
+    background-color: #6c757d;
+    color: white;
+}
+
+.cancelButton:hover {
+    background-color: #5a6268;
+}
+
+.deleteButton {
+    background-color: #dc3545;
+    color: white;
+}
+
+.deleteButton:hover {
+    background-color: #c82333;
+}
+
+.editButton {
+    background-color: #ffc107;
+    color: white;
+}
+
+.editButton:hover {
+    background-color: #e0a800;
+}
