@@ -1,15 +1,16 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-import TaskForm from './Components/TaskForm';
-import Main from './Components/Main';
+import TaskForm from './Components/TaskForm/TaskForm';
+import Main from './Components/Main/Main';
 import styles from './App.module.css';
 
 const App = () => {
     const [tasks, setTasks] = useState([]);
+    const URI = "http://localhost:5000";
 
     const getTasks = async () => {
         try {
-            const response = await axios.get('http://localhost:5000/tasks');
+            const response = await axios.get(`${URI}/tasks`);
             setTasks(response.data);
         } catch (error) {
             console.error(error);
