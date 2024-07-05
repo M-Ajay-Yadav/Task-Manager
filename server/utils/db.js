@@ -1,6 +1,9 @@
 const mongoose = require("mongoose");
+require("dotenv").config({ path: "./config/.env" });
 
-const URI = "mongodb://127.0.0.1:27017/mern_admin_panel";
+
+const URI = process.env.MONGO_URI;
+// const URI = "mongodb://127.0.0.1:27017/mern_admin_panel";
 
 const connectDb = async () => {
   try {
