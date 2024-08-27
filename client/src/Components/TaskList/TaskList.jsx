@@ -47,7 +47,7 @@ const TaskList = ({ tasks, getTasks }) => {
   return (
     <div>
       {/* To-Do Tasks Section */}
-      <h2>To-Do Tasks</h2>
+      <h2>Tasks To Complete</h2>
       <ul className={styles.list}>
         {todoTasks.map((task) => (
           <li className={styles.listItem} key={task._id}>
