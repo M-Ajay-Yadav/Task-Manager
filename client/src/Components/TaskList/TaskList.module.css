@@ -74,3 +74,9 @@
 .editButton:hover {
     background-color: #e0a800;
 }
+.completeButton{
+    background-color: #28a745;
+}
+.completeButton:hover{
+    background-color: rgb(77, 12, 231);
+}
