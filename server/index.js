@@ -10,7 +10,7 @@ const path = require("path");
 
 dotenv.config({ path: path.resolve(__dirname, "./config/.env") });
 
-const BASE_URL = process.env.RENDER_EXTERNAL_URL;
+const BASE_URL = process.env.RENDER_EXTERNAL_URL || process.env.BASE_URL;
 
 // const BASE_URL = process.env.BASE_URL;
 // if (!BASE_URL) {
