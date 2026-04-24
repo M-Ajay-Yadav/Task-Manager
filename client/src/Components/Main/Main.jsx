@@ -4,9 +4,9 @@ import TaskList from "../TaskList/TaskList";
 import styles from "./Main.module.css";
 
 const Main = ({ tasks, getTasks }) => {
-  useEffect(() => {
-    getTasks();
-  }, []);
+  // useEffect(() => {
+  //   getTasks();
+  // }, []);
 
   return (
     <div className={styles.container}>
