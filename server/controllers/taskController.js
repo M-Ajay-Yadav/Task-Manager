@@ -5,7 +5,8 @@ const getTasks = async (req, res) => {
         const tasks = await Task.find();
         res.status(200).json(tasks);
     } catch (error) {
-        res.status(500).json({ message: error.message });
+        console.error("Get tasks error:", error.message);
+        res.status(500).json({ message:"internal server error" });
     }
 };
 
@@ -15,7 +16,8 @@ const createTask = async (req, res) => {
         const savedTask = await task.save();
         res.status(201).json(savedTask);
     } catch (error) {
-        res.status(400).json({ message: error.message });
+        console.error("Create task error:", error.message);
+        res.status(400).json({ message:"Bad request" });
     }
 };
 
@@ -24,7 +26,8 @@ const updateTask = async (req, res) => {
         const updatedTask = await Task.findByIdAndUpdate(req.params.id, req.body, { new: true });
         res.status(200).json(updatedTask);
     } catch (error) {
-        res.status(400).json({ message: error.message });
+        console.error("Update task error:", error.message);
+        res.status(400).json({ message:"Bad request" });
     }
 };
 
@@ -33,7 +36,8 @@ const deleteTask = async (req, res) => {
         await Task.findByIdAndDelete(req.params.id);
         res.status(200).json({ message: 'Task deleted' });
     } catch (error) {
-        res.status(400).json({ message: error.message });
+        console.error("Delete task error:", error.message);
+        res.status(400).json({ message:"Bad request" });
     }
 };
 
